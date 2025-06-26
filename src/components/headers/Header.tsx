@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography variant="h6">My App</Typography>
+        <Typography variant="h6">Formail</Typography>
       </Toolbar>
     </AppBar>
   );
