@@ -421,11 +421,11 @@ const EmailEditor: React.FC<EmailEditorProps> = ({
             border: 1,
             borderColor: "divider",
             borderRadius: 1,
-            minHeight: 300,
+            minHeight: 100,
             "& .ProseMirror": {
               outline: "none",
               padding: 2,
-              minHeight: 300,
+              minHeight: 100,
             },
           }}
         >
@@ -443,7 +443,7 @@ const EmailEditor: React.FC<EmailEditorProps> = ({
             {editor && (
               <div
                 onClick={() => editor?.commands.focus()}
-                style={{ minHeight: 250, cursor: "text" }}
+                style={{ minHeight: 100, cursor: "text" }}
               />
             )}
           </EditorProvider>
