@@ -31,9 +31,9 @@ export default function LoginCard() {
     console.log("here2");
     if (!emailError && !passwordError) {
       console.log(email, password);
-      alert("로그인 성공");
+      // alert("로그인 성공");
     } else {
-      alert("로그인 실패");
+      // alert("로그인 실패");
     }
   };
 
@@ -83,11 +83,14 @@ export default function LoginCard() {
         sx={{ display: "flex", flexDirection: "column", width: "100%", gap: 2 }}
       >
         <FormControl>
-          <FormLabel htmlFor="email">이메일</FormLabel>
+          <FormLabel htmlFor="email" data-testid="email-label">
+            이메일
+          </FormLabel>
           <TextField
             id="email"
             name="email"
             type="email"
+            data-testid="email"
             autoFocus
             error={emailError}
             helperText={emailHelperText}
@@ -101,6 +104,7 @@ export default function LoginCard() {
             id="password"
             name="password"
             type="password"
+            data-testid="password"
             error={passwordError}
             helperText={passwordHelperText}
             value={password}
@@ -110,6 +114,7 @@ export default function LoginCard() {
         <Button
           type="submit"
           fullWidth
+          data-testid="login-button"
           variant="contained"
           onClick={onValidationSubmit}
         >
